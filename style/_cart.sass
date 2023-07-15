@@ -1,0 +1,136 @@
+.cart
+    display: flex
+    justify-content: space-between
+    gap: 128px
+    &__block
+        display: flex
+        flex-direction: column
+        gap: 40px
+        padding-top: 96px
+        &_item
+            display: flex
+            filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13))
+            background-color: #FFFFFF
+        &_item img
+            width: 262px
+        &_info
+            padding: 22px 22px 22px 31px
+            display: flex
+            align-items: baseline
+            justify-content: space-between
+            width: 390px
+        &_info-text
+            display: flex
+            flex-direction: column
+            gap: 42px
+        &_info-heading
+            font-weight: 400
+            font-size: 24px
+            color: $colorDarK
+        &_info-p
+            display: flex
+            flex-direction: column
+            gap: 6px
+            font-weight: 400
+            font-size: 22px
+            color: #575757
+        &_info-quantity
+            padding: 0 16px
+            margin-left: 24px
+            font-size: 18px
+            color: #656565
+            border: 1px solid #EAEAEA
+        &_info-svg
+            padding-left: 57px
+    &__buttons
+        padding-top: 72px
+        padding-bottom: 128px
+        display: flex
+        justify-content: space-between
+        &_but
+            border: 1px solid #A4A4A4
+            padding: 16px 40px
+            font-weight: 300
+            font-size: 14px
+            color: #000000
+            transition: all .4s
+            text-transform: uppercase
+            &:hover
+                background-color: $colorSite
+                color: #FFFFFF
+                border: 1px solid $colorSite
+    &__right
+        width: 360px
+    &__adress
+        padding-top: 113px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 20px
+        &_input
+            width: 360px
+            height: 45px
+            padding-left: 16px
+            border: 1px solid #A4A4A4
+            font-family: "Lato"
+            font-weight: 300
+            font-size: 13px
+            color: #B1B1B1
+            box-sizing: border-box
+        &_submit
+            font-family: 'Lato'
+            font-weight: 300
+            font-size: 11px
+            color: #4A4A4A
+            padding: 10px 14px
+            margin-top: 3px
+            border: 1px solid #A4A4A4
+            background-color: #FFFFFF
+            transition: all .4s
+        &_submit:hover
+            background-color: $colorSite
+            color: #FFFFFF
+            border: 1px solid $colorSite
+    &__adress-heading
+        font-weight: 300
+        font-size: 16px
+        color: $colorDarK
+    &__total
+        padding-top: 56px
+        &_block
+            background: #F5F3F3
+            padding: 40px 44px
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+        &_block-sub
+            padding-bottom: 12px
+            font-weight: 400
+            font-size: 11px
+            color: #4A4A4A
+        &_block-grand
+            padding-bottom: 20px
+            font-weight: 300
+            font-size: 16px
+            color: $colorDarK
+        &_block-input
+            font-family: 'Lato'
+            background: $colorSite
+            padding: 16px 42px
+            border: 1px solid $colorSite
+            margin-top: 16px
+            font-weight: 300
+            font-size: 16px
+            color: #FFFFFF
+            transition: all .4s
+            &:hover
+                background-color: #E05C6E
+        &_block-hr
+            width: 275px
+            background: #E2E2E2
+    &__span
+        font-weight: 700
+    &__span-color
+        color: #EF5B70
+    &__span-padding
+        padding-left: 12px

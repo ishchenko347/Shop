@@ -1,0 +1,134 @@
+@media (max-width: 1150px)
+    $widthSite: 736px
+    $gapGrid: 16px
+
+    .center
+        padding-left: calc( 50% - $widthSite / 2)
+        padding-right: calc( 50% - $widthSite / 2)
+
+    .header
+        &__left
+            padding-left: 16px
+        &__right
+            padding-right: 16px
+
+    .top
+        &__right
+            padding-left: 40px
+        &__heading
+            font-size: 44px
+            &_text
+                font-size: 24px
+
+    .offer
+        margin-top: 20px
+        &__content
+            gap: 20px
+        &__item_big
+            margin-top: 16px
+
+    .product
+        margin-top: 152px
+        &__content
+            margin-bottom: 40px
+            gap: $gapGrid
+        &__content-margin
+            margin-top: 72px
+        &__card
+            padding-left: 0
+            padding-right: 0
+            margin-top: auto
+        &__card-card
+            padding: 64px 90px
+
+    .advantages
+        margin-top: 64px
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 48px
+        padding-top: 48px
+        padding-bottom: 64px
+        &__item
+            padding: 0
+
+    .feedback
+        flex-direction: column
+        align-items: center
+        background-position-x: -350px
+        &__left
+            margin-top: 64px
+            margin-bottom: 0
+        &__right
+            margin-top: 72px
+            width: auto
+            padding-left: 0
+            margin-bottom: 140px
+        &__button
+            padding-top: 28px
+
+    .footer
+        &__text
+            padding-left: 16px
+        &__icon
+            padding-right: 16px
+
+    // каталог
+
+    .filter-sort
+        margin-top: 12px
+        justify-content: space-between
+
+    .product__item-catalog:nth-child(3)
+        display: none
+
+    .box_catalog
+        margin-top: 40px
+
+    // продукт
+
+    .slider
+        height: 624px
+        &__img-item
+            object-fit: cover
+            height: 624px
+
+    .box_product
+        margin-top: 128px
+        margin-bottom: 88px
+
+    // корзина
+
+    .cart
+        display: flex
+        flex-direction: column
+        gap: 64px
+        padding-top: 60px
+        padding-bottom: 128px
+        &__block
+            padding-top: 0
+            &_info
+                width: 472px
+        &__buttons
+            justify-content: center
+            padding-top: 64px
+            padding-bottom: 0
+            gap: 48px
+        &__right
+            display: flex
+            align-items: flex-start
+            gap: 16px
+        &__adress
+            padding-top: 0
+        &__total
+            padding-top: 40px
+
+    // регистрация
+
+    .registr
+        gap: 22px
+        padding-top: 40px
+        &__info-h3
+            padding-bottom: 32px
+        &__info-text
+            font-size: 16px

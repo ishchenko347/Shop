@@ -1,0 +1,393 @@
+@import _vars
+
+*
+    margin: 0
+    padding: 0
+
+summary
+    display: block
+    &::-webkit-details-marker
+        display: none
+
+.center
+    padding-left: calc(50% - $widthSite / 2)
+    padding-right: calc(50% - $widthSite / 2)
+
+a
+    text-decoration: none
+
+img
+    max-width: 100%
+
+body
+    font-family: 'Lato', sans-serif
+    color: $colorDarK
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+.header
+    height: 75px
+    display: flex
+    justify-content: space-between
+    background: $colorDarK
+    &__left, &__right
+        display: flex
+        align-items: center
+        gap: 40px
+    &__right
+        gap: 32px
+    &__logo
+        &:hover path
+            fill: $colorSite
+
+.top-box
+    position: relative
+    overflow: hidden
+
+.menu
+    position: absolute
+    top: 75px
+    right: 0
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 32px
+    width: 232px
+    box-sizing: border-box
+    transition: all .5s
+    z-index: 2
+    &__ul
+        list-style-type: none
+    &__heading
+        padding-bottom: 4px
+        font-weight: 700
+        font-size: 14px
+        color: #000000
+    &__li
+        padding-top: 20px
+    &__link-heading
+        font-weight: 400
+        font-size: 14px
+        color: $colorSite
+    &__content-links
+        display: flex
+        flex-direction: column
+        gap: 11px
+        padding-top: 12px
+        padding-left: 22px
+    &__link
+        font-weight: 400
+        font-size: 14px
+        color: #6F6E6E
+        &:hover
+            color: $colorSite
+    &__close
+        position: absolute
+        top: 16px
+        right: 16px
+    &__box
+        display: none
+
+// скрываем элемент switcher так, чтобы во всех браузерах работал
+
+#switcher
+    position: absolute
+    visibility: hidden
+    left: -9999999px
+
+#switcher:checked ~ .menu
+    right: -232px
+
+.top
+    padding-left: calc(50% - 800px)
+    padding-right: calc(50% - 800px)
+    background: #F1E4E6
+    display: flex
+
+    &__content
+        border-left: 12px solid $colorSite
+        padding-left: 16px
+        margin-top: 40%
+
+    &__left, &__right
+        width: 50%
+
+    &__right
+        padding-left: 64px
+        box-sizing: border-box
+
+    &__heading
+        font-size: 48px
+        font-weight: 900
+        &_text
+            font-size: 32px
+            font-weight: 700
+
+    &__span
+        color: $colorSite
+
+.offer
+    margin-top: 64px
+    &__content
+        display: flex
+        gap: $gapGrid
+    &__img
+        width: $contentCol4
+        transition: filter .4s
+        &_big
+            width: $widthSite
+    &__item
+        position: relative
+        &:hover .offer__img
+            filter: brightness(50%)
+        &_big
+            margin-top: 30px
+    &__text
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+    &__p
+        font-weight: 400
+        font-size: 16px
+        color: #FFFFFF
+
+    &__h3
+        font-weight: 700
+        font-size: 24px
+        color: $colorSite
+
+.product
+    margin-top: 96px
+
+    &__h3
+        font-weight: 400
+        font-size: 30px
+        text-align: center
+
+    &__p
+        font-weight: 400
+        font-size: 14px
+        text-align: center
+        margin-top: 6px
+        color: #9F9F9F
+
+    &__content
+        display: flex
+        flex-wrap: wrap
+        gap: $gapGrid
+        margin-bottom: 48px
+        justify-content: center
+
+    &__content-margin
+        margin-top: 48px
+
+    &__img
+        transition: all .4s
+
+    &__button
+        border: 1px solid #FF6A6A
+        padding: 15px 37px
+        font-weight: 400
+        font-size: 16px
+        color: #F26376
+        display: block
+        margin: 0 auto
+        width: 212px
+        text-align: center
+        transition: all .4s
+        box-sizing: border-box
+        &:hover
+            background-color: #FF6A6A
+            color: #FFFFFF
+
+.product__item
+    width: $contentCol4
+    background: #F8F8F8
+    position: relative
+
+    &:hover .product__img
+        filter: brightness(50%)
+
+    &:hover .product__add
+        display: flex
+
+.product__add
+    color: #FFFFFF
+    border: 1px solid #FFFFFF
+    padding: 14px
+    width: 140px
+    height: 22px
+    display: none
+    gap: 12px
+    position: absolute
+    top: 188px
+    left: 112px
+    transition: all .4s
+    &:hover
+        background-color: #FFFFFF
+        color: $colorDarK
+        &:hover path
+            fill: $colorDarK
+
+.product__info
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    padding: 24px 16px
+    gap: 16px
+
+    &_heading
+        font-weight: 400
+        font-size: 13px
+        color: #000000
+
+    &_p
+        font-weight: 300
+        font-size: 14px
+        color: #5D5D5D
+
+    &_price
+        font-weight: 400
+        font-size: 16px
+        color: $colorSite
+
+.advantages
+    margin-top: 96px
+    background: $colorDarK
+    display: flex
+    justify-content: space-between
+
+    &__item
+        max-width: 360px
+        padding: 102px 0
+        text-align: center
+
+    &__heading
+        font-weight: 400
+        font-size: 20px
+        color: #FBFBFB
+
+    &__p
+        font-weight: 300
+        font-size: 14px
+        color: #FBFBFB
+        margin-top: 16px
+
+.free__delivery
+    margin-top: 28px
+
+.sales__discount
+    margin-top: 20px
+
+.quality__assurance
+    margin-top: 25px
+
+.feedback
+    background-image: url(img/feedback_bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    justify-content: space-between
+
+    &__left
+        width: 50%
+        max-width: 360px
+        margin-top: 98px
+        text-align: center
+        margin-bottom: 126px
+    &__left-p
+        margin-top: 30px
+        font-weight: 400
+        font-size: 20px
+        color: $colorDarK
+
+    &__right
+        margin-top: 152px
+        text-align: center
+        width: 50%
+        padding-left: 64px
+        box-sizing: border-box
+    &__right-p
+        font-weight: 400
+        font-size: 18px
+        color: $colorDarK
+
+    &__h3
+        font-weight: 700
+        font-size: 24px
+        color: $colorDarK
+
+    &__button
+        display: flex
+        justify-content: center
+        padding-top: 32px
+        height: 49px
+
+    &__subscribe
+        background: $colorSite
+        border-radius: 0 22px 22px 0
+        width: 100px
+        font-weight: 400
+        font-size: 14px
+        color: #FFFFFF
+        border: 0px solid $colorSite
+        transition: all .4s
+        &:hover
+            background-color: #E05C6E
+
+    &__input
+        background: #E1E1E1
+        border: 0px solid #E1E1E1
+        border-radius: 22px 0 0 22px
+        width: 256px
+        font-weight: 400
+        font-size: 14px
+        color: $colorDarK
+        opacity: 0.67
+        padding-left: 22px
+        box-sizing: border-box
+
+.footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 24px
+    padding-bottom: 24px
+    background: $colorDarK
+    margin-top: auto
+
+    &__text
+        font-weight: 400
+        font-size: 16px
+        color: #FBFBFB
+
+    &__icon
+        display: flex
+        gap: 8px
+        &_bg
+            width: 32px
+            height: 32px
+            background-color: #FFFFFF
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: all .4s
+            &:hover
+                background-color: $colorSite
+            &:hover path
+                fill: #FFFFFF
+
+@import catalog
+@import product
+@import cart
+@import registration
+@import m1023
+@import m767
